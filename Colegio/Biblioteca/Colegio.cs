@@ -2,6 +2,13 @@
 
 public class Colegio
 {
-List<Curso> curso = new List<Curso>();
+    public string Nombre { get; set; }
+    public Curso curso { get; set; }
+    public Colegio(string nombre)
+    {
+        Nombre = nombre;
+    }
+
 }
+
 
