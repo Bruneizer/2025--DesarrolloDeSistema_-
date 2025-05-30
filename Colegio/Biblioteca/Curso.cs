@@ -9,4 +9,8 @@ public class Curso
         Nombre = nombre;
 
     }
+       public void AgregarEstudiante(Estudiante estudiante)
+    {
+        estudiantes.Add(estudiante);
+    }
 }

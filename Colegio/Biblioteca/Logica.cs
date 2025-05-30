@@ -4,6 +4,8 @@ public class Logica
 {
     List<Colegio> colegios = new List<Colegio>();
     List<Curso> cursos = new List<Curso>();
+    List<Materia> materias = new List<Materia>();
+    List<Estudiante> estudiantes = new List<Estudiante>();
 
     public void AgregarColegio(Colegio colegio)
     {
@@ -17,10 +19,21 @@ public class Logica
 
         }
     }
-    public void AgregarCurso(Curso curso, Colegio colegio)
+    public void AgregarCurso(Curso curso)
     {
         cursos.Add(curso);
-        cursos.Add(colegio);
+    }
+    public void InformarCursos()
+    {
+        foreach (Curso cursoss in cursos)
+        {
+            Console.WriteLine($"Cursos registrados: {cursoss.Nombre}");
+
+        }
+    }
+    public void AgregarEstudianteAunCurso(Estudiante estudiante, Curso curso)
+    {
+        curso.AgregarEstudiante(estudiante);
     }
 
 }
